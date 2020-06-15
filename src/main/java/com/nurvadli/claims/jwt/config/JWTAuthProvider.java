@@ -32,7 +32,7 @@ public class JWTAuthProvider {
      * @return
      */
     public static String create(String id, String issuer, String subject, long expiration) {
-        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
+        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.RS256;
 
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);

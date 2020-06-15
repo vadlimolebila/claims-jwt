@@ -32,9 +32,9 @@ public class JWT {
 
     @SuppressWarnings("deprecation")
     public String generateJwtToken(PrivateKey privateKey) {
-        String token = Jwts.builder().setSubject("adam")
+        String token = Jwts.builder().setSubject("nurvadli")
                 .setExpiration(new Date(2018, 1, 1))
-                .setIssuer("info@wstutorial.com")
+                .setIssuer("vadlymolebila@gmail.com")
                 .claim("groups", new String[] { "user", "admin" })
                 // RS256 with privateKey
                 .signWith(SignatureAlgorithm.RS256, privateKey).compact();
